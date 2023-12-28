@@ -1,0 +1,14 @@
+pipeline{
+
+    agent any
+
+    stages{
+
+        stage('Continuous Download') {
+
+            steps{
+                git branch: 'main', url: 'https://github.com/njokadeclan/PROJECT3.git'
+            }
+        }
+    }
+}
