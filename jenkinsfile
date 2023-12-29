@@ -10,10 +10,10 @@ pipeline{
                 git branch: 'main', url: 'https://github.com/njokadeclan/PROJECT3.git'
             }
         }
-        stage('Build'){
+        stage('Unit Test'){
 
             steps{
-                sh' clean install'
+                sh'mvn test'
             }
         }
     }
